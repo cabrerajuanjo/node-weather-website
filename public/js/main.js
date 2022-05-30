@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const messageOne = weatherForm.querySelector('#message-1')
     const messageTwo = weatherForm.querySelector('#message-2')
 
+
+
     weatherForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const location = search.value;
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 {
                     messageOne.textContent = data.location;
                     messageTwo.textContent = data.forecast;
-                }
+                } 
             })
         })
     })
