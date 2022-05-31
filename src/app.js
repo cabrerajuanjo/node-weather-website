@@ -4,6 +4,7 @@ const forecast = require('./utils/forecast.js');
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 const viewsPath = path.join(__dirname, '../templates/views')
 
@@ -70,6 +71,6 @@ app.get('*', (req, res) => {
 })
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('listening on 3000')
 })

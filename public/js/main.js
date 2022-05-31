@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         const location = search.value;
         messageOne.textContent = 'Loading weather...';
         messageTwo.textContent = '';
-        fetch("http://localhost:3000/weather?address=" + location).then((response) => {
+        fetch("/weather?address=" + location).then((response) => {
             response.json().then((data) => {
                 if(data.error)
                 {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 {
                     messageOne.textContent = data.location;
                     messageTwo.textContent = data.forecast;
-                } 
+                }
             })
         })
     })
